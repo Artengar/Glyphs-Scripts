@@ -12,8 +12,7 @@ selectedLayers = Font.selectedLayers
 def process( thisLayer ):
 	thisLayer.parent.beginUndo()
 	
-	for i in range( len( thisLayer.paths ))[::-1]:
-		del thisLayer.paths[i]
+	thisLayer.paths = []
 		
 	thisLayer.parent.endUndo()
 
